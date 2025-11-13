@@ -1,0 +1,10 @@
+ <style>
+        .container-com-fundo {
+            background-image: url('https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.dio.me%2Farticles%2Fa-importancia-da-programacao-nos-dias-atuais&psig=AOvVaw0BmxR4m1w6jaRifj5vj3ge&ust=1763129552084000&source=images&cd=vfe&opi=89978449&ved=0CBUQjRxqFwoTCMiNvK6n75ADFQAAAAAdAAAAABAf'); /* 1. Caminho da imagem */
+            background-size: 80%; /* 2. Tamanho da imagem */
+            background-repeat: no-repeat; /* 3. Para não repetir a imagem */
+            width: 800px; /* 4. Largura do container */
+            height: 400px; /* 5. Altura do container */
+            color: white; /* Cor do texto para ser visível */
+            padding: 20px; /* Espaçamento interno */
+        }
