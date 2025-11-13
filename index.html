@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog de Programação - Aprenda Codando</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(135deg, #ff7e5f 0%, #feb47b 100%); /* Gradiente laranja-amarelo */
+            color: #333;
+        }
+        header {
+            background: #e74c3c; /* Vermelho vibrante */
+            color: white;
+            padding: 20px;
+            text-align: center;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+        nav {
+            margin-top: 10px;
+        }
+        nav a {
+            color: white;
+            margin: 0 15px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.3s;
+        }
+        nav a:hover {
+            color: #FFD700; /* Dourado no hover */
+        }
+        .container {
+            max-width: 1200px;
+            margin: 20px auto;
+            padding: 20px;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 0 15px rgba(0,0,0,0.1);
+        }
+        .post {
+            margin-bottom: 30px;
+            padding: 20px;
+            border-bottom: 1px solid #eee;
+        }
+        .post h2 {
+            color: #e74c3c; /* Vermelho para títulos */
+            margin-bottom: 10px;
+        }
+        .post p {
+            line-height: 1.6;
+        }
+        .video-link {
+            display: inline-block;
+            background: #f39c12; /* Laranja */
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+            margin-top: 10px;
+            transition: background 0.3s;
+        }
+        .video-link:hover {
+            background: #e67e22; /* Laranja escuro */
+        }
+        footer {
+            text-align: center;
+            padding: 20px;
+            background: #2c3e50; /* Azul escuro */
+            color: white;
+            margin-top: 20px;
+        }
+        .contato {
+            margin-top: 10px;
+        }
+        .contato p {
+            margin: 5px 0;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Blog de Programação</h1>
+        <p>Aprenda a programar com tutoriais explicativos e vídeos incríveis!</p>
+        <nav>
+            <a href="#home">Home</a>
+            <a href="#tutoriais">Tutoriais</a>
+            <a href="#contato">Contato</a>
+        </nav>
+    </header>
+
+    <div class="container">
+        <section id="home">
+            <h2>Bem-vindo ao Mundo da Programação!</h2>
+            <p>Explore posts sobre linguagens como Python, JavaScript e muito mais. Cada artigo inclui explicações detalhadas e links para vídeos práticos.</p>
+        </section>
+
+        <section id="tutoriais">
+            <div class="post">
+                <h2>Introdução ao Python</h2>
+                <p>Python é uma linguagem simples e poderosa. Neste tutorial, você aprenderá os básicos: variáveis, loops e funções. Ideal para iniciantes!</p>
+                <a href="https://www.youtube.com/watch?v=-iSbDpl5Jhw&list=PLvE-ZAFRgX8hnECDn1v9HNTI71veL3oW0" class="video-link" target="_blank">Assista o Vídeo</a>
+            </div>
+
+            <div class="post">
+                <h2>JavaScript para Web</h2>
+                <p>Domine o JavaScript para criar sites interativos. Cobrimos DOM, eventos e APIs. Perfeito para desenvolvedores front-end.</p>
+                <a href="https://www.youtube.com/watch?v=WRlfwBof66s" class="video-link" target="_blank">Assista o Vídeo</a>
+            </div>
+
+            <div class="post">
+                <h2>Algoritmos em C++</h2>
+                <p>Aprenda algoritmos eficientes com C++. Exemplos práticos de sorting e busca. Avançado, mas explicativo passo a passo.</p>
+                <a href="https://www.youtube.com/watch?v=0ciLhd1oZc0&list=PLx4x_zx8csUjczg1qPHavU1vw1IkBcm40" class="video-link" target="_blank">Assista o Vídeo</a>
+            </div>
+        </section>
+    </div>
+
+    <footer>
+        <p>&copy; 2023 Blog de Programação. Todos os direitos reservados.</p>
+        <div class="contato">
+            <p><strong>Contato:</strong></p>
+            <p>Telefone: 11971796145</p>
+            <p>Email: lucas.d.santos54@aluno.senai.br</p>
+        </div>
+    </footer>
+</body>
+</html>
