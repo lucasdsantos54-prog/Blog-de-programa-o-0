@@ -4,90 +4,156 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Blog de Programação - Aprenda Codando</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
     <style>
-        .container-com-fundo {
-            background-image: url(Programação.jpg); /* 1. Caminho da imagem */
-            background-size: 80%; /* 2. Tamanho da imagem */
-            background-repeat: no-repeat; /* 3. Para não repetir a imagem */
-            width: 800px; /* 4. Largura do container */
-            height: 400px; /* 5. Altura do container */
-            color: white; /* Cor do texto para ser visível */
-            padding: 20px; /* Espaçamento interno */
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(135deg, #0f0f23 0%, #1a1a2e 100%);
+            color: #e0e0e0;
+            line-height: 1.6;
         }
         header {
-            background: #081534; /* Vermelho vibrante */
-            color: #D3D3D3;
-            padding: 20px;
+            background: linear-gradient(135deg, #16213e 0%, #0f3460 100%);
+            color: #ffffff;
+            padding: 40px 20px;
             text-align: center;
-            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+        }
+        header h1 {
+            margin: 0;
+            font-size: 2.5em;
+            font-weight: 700;
+        }
+        header p {
+            margin: 10px 0 20px;
+            font-size: 1.2em;
+            font-weight: 300;
         }
         nav {
-            margin-top: 10px;
+            margin-top: 20px;
         }
         nav a {
-            color: #d3d3d3;
-            margin: 0 15px;
+            color: #a8dadc;
+            margin: 0 20px;
             text-decoration: none;
-            font-weight: bold;
-            transition: color 0.3s;
+            font-weight: 500;
+            font-size: 1.1em;
+            transition: all 0.3s ease;
+            padding: 10px 15px;
+            border-radius: 5px;
         }
         nav a:hover {
-            color: #0000ff; /* Dourado no hover */
+            color: #ffffff;
+            background: #00d4ff;
+            transform: translateY(-2px);
         }
         .container {
             max-width: 1200px;
-            margin: 20px auto;
-            padding: 20px;
-            background: #D3D3D3;
-            border-radius: 10px;
-            box-shadow: 0 0 15px rgba(0,0,0,0.1);
+            margin: 40px auto;
+            padding: 30px;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+            backdrop-filter: blur(10px);
         }
-        .post {
-            margin-bottom: 30px;
-            padding: 20px;
-            border-bottom: 1px solid #eee;
+        .container h2 {
+            color: #00d4ff;
+            font-size: 2em;
+            margin-bottom: 20px;
+            text-align: center;
         }
-        .post h2 {
-            color: #0c255e; /* Vermelho para títulos */
+        .container p {
+            margin-bottom: 15px;
+        }
+        .container ul {
+            margin: 20px 0;
+            padding-left: 20px;
+        }
+        .container li {
             margin-bottom: 10px;
         }
+        .container img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+        }
+        .post {
+            margin-bottom: 40px;
+            padding: 30px;
+            border-bottom: 1px solid rgba(255,255,255,0.1);
+            background: rgba(255, 255, 255, 0.02);
+            border-radius: 10px;
+            transition: transform 0.3s ease;
+        }
+        .post:hover {
+            transform: translateY(-5px);
+        }
+        .post h2 {
+            color: #00d4ff;
+            margin-bottom: 15px;
+            font-size: 1.8em;
+        }
         .post p {
-            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+        .post img {
+            width: 300px;
+            display: block;
+            margin: 20px auto;
         }
         .video-link {
             display: inline-block;
-            background: #2699e6; /* Laranja */
-            color: #010000;
-            padding: 10px 20px;
+            background: linear-gradient(135deg, #00d4ff 0%, #007bff 100%);
+            color: #ffffff;
+            padding: 12px 25px;
             text-decoration: none;
-            border-radius: 5px;
-            margin-top: 10px;
-            transition: background 0.3s;
+            border-radius: 25px;
+            margin-top: 15px;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(0,212,255,0.3);
         }
         .video-link:hover {
-            background: #e67e22; /* Laranja escuro */
+            background: linear-gradient(135deg, #007bff 0%, #0056b3 100%);
+            transform: scale(1.05);
         }
         footer {
             text-align: center;
-            padding: 20px;
-            background: #2c3e50; /* Azul escuro */
-            color: white;
-            margin-top: 20px;
+            padding: 30px;
+            background: linear-gradient(135deg, #16213e 0%, #0f3460 100%);
+            color: #a8dadc;
+            margin-top: 40px;
+            box-shadow: 0 -4px 20px rgba(0,0,0,0.3);
         }
         .contato {
-            margin-top: 10px;
+            margin-top: 20px;
         }
         .contato p {
-            margin: 5px 0;
+            margin: 10px 0;
+            font-size: 1em;
+        }
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 2em;
+            }
+            .container {
+                padding: 20px;
+            }
+            .post {
+                padding: 20px;
+            }
+            nav a {
+                margin: 0 10px;
+                display: block;
+                margin-bottom: 10px;
+            }
         }
     </style>
- <Style>
-body{
-    background-image: url(Programação.jpg);
-}
- </Style>
 </head>
-<body> 
+<body>
     <header>
         <h1>Blog de Programação</h1>
         <p>Aprenda a programar com tutoriais explicativos e vídeos incríveis!</p>
@@ -106,52 +172,42 @@ body{
             <p>Onde são usados</p>
             <p>JavaScript:</p>
             <ul>
-  <li>É essencial para o front-end, criando páginas dinâmicas e interativas.</li>
-  <li>Com Node.js, é também uma escolha popular para o back-end, permitindo que a mesma linguagem seja usada em toda a aplicação.</li>
-  <li>Usa frameworks como Electron para aplicações desktop (ex: Visual Studio Code) e React Native para aplicativos móveis cross-platform.</li>
-</ul>
-<p>Python:</p>
-<ul>
-  <li>Usado principalmente no back-end para lógica de servidor, bancos de dados e APIs, com frameworks como Django e Flask.</li>
-  <li>É a linguagem dominante para ciência de dados, machine learning e IA, graças a bibliotecas robustas como TensorFlow, PyTorch e Pandas.</li>
-  <li>É amplamente utilizado para automação de tarefas repetitivas, criação de scripts e gerenciamento de sistemas, por sua sintaxe simples e legibilidade.</li>
-<img src="jython.jpg"
-     alt="Jython image"
-     style="width:50%; display:block; margin:15px auto;">
-
-</ul>
-            
+                <li>É essencial para o front-end, criando páginas dinâmicas e interativas.</li>
+                <li>Com Node.js, é também uma escolha popular para o back-end, permitindo que a mesma linguagem seja usada em toda a aplicação.</li>
+                <li>Usa frameworks como Electron para aplicações desktop (ex: Visual Studio Code) e React Native para aplicativos móveis cross-platform.</li>
+            </ul>
+            <p>Python:</p>
+            <ul>
+                <li>Usado principalmente no back-end para lógica de servidor, bancos de dados e APIs, com frameworks como Django e Flask.</li>
+                <li>É a linguagem dominante para ciência de dados, machine learning e IA, graças a bibliotecas robustas como TensorFlow, PyTorch e Pandas.</li>
+                <li>É amplamente utilizado para automação de tarefas repetitivas, criação de scripts e gerenciamento de sistemas, por sua sintaxe simples e legibilidade.</li>
+                <img src="jython.jpg" alt="Jython image" style="width:50%; display:block; margin:15px auto;">
+            </ul>
         </section>
 
         <section id="tutoriais">
             <div class="post">
-                <h2><b>Introdução ao Python<b/></h2>
+                <h2><b>Introdução ao Python</b></h2>
                 <p>Introdução ao Python apresenta uma linguagem simples, versátil e muito poderosa, perfeita para quem está começando a programar. Neste conteúdo, você aprende os fundamentos essenciais — como variáveis, loops e funções — que servirão de base para projetos mais avançados no futuro. Uma ótima porta de entrada para o mundo da programação.
-Confira no vídeo!</p>
-      <img src="python-logo.jpg"
-         alt="Python"
-         style="width:300px; display:block; margin:15px;">
-                <a href="https://www.youtube.com/watch?v=DXmCU7v9glM" class="video-link" target="_blank"><b>Assista o Vídeo<b/></a>
+                Confira no vídeo!</p>
+                <img src="python-logo.jpg" alt="Python" style="width:300px; display:block; margin:15px;">
+                <a href="https://www.youtube.com/watch?v=DXmCU7v9glM" class="video-link" target="_blank"><b>Assista o Vídeo</b></a>
             </div>
 
             <div class="post">
-                <h2><b>JavaScript para Web<b/></h2>
+                <h2><b>JavaScript para Web</b></h2>
                 <p>JavaScript para Web é a base para transformar páginas estáticas em experiências dinâmicas e interativas. Com ele, você manipula o DOM para alterar elementos em tempo real, trabalha com eventos para responder às ações do usuário e utiliza diversas APIs do navegador para ampliar as funcionalidades do site. É uma habilidade essencial para qualquer desenvolvedor front-end que deseja criar interfaces modernas e eficientes.
-Confira no vídeo!</p>
-      <img src="images.jpg"
-         alt="JavaScript"
-         style="width:300px; display:block; margin:15px;">
-                <a href="https://www.youtube.com/watch?v=WRlfwBof66s" class="video-link" target="_blank"><b>Assista o Vídeo<b/></a>
+                Confira no vídeo!</p>
+                <img src="images.jpg" alt="JavaScript" style="width:300px; display:block; margin:15px;">
+                <a href="https://www.youtube.com/watch?v=WRlfwBof66s" class="video-link" target="_blank"><b>Assista o Vídeo</b></a>
             </div>
 
             <div class="post">
-                <h2><b>Algoritmos em C++<b/></h2>
+                <h2><b>Algoritmos em C++</b></h2>
                 <p>Algoritmos em C++ oferecem uma forma poderosa e eficiente de resolver problemas computacionais. Neste material, você explora estruturas e técnicas fundamentais, entendendo na prática como funcionam algoritmos de ordenação, busca e outras operações essenciais. Mesmo sendo um conteúdo avançado, tudo é apresentado de maneira clara e passo a passo, facilitando o aprendizado.
-Confira no vídeo!</p>
-      <img src="C++.jpg"
-         alt="C++"
-         style="width:300px; display:block; margin:15px;">
-                <a href="https://www.youtube.com/watch?v=0ciLhd1oZc0&list=PLx4x_zx8csUjczg1qPHavU1vw1IkBcm40" class="video-link" target="_blank"><b>Assista o Vídeo<b/></a>
+                Confira no vídeo!</p>
+                <img src="C++.jpg" alt="C++" style="width:300px; display:block; margin:15px;">
+                <a href="https://www.youtube.com/watch?v=0ciLhd1oZc0&list=PLx4x_zx8csUjczg1qPHavU1vw1IkBcm40" class="video-link" target="_blank"><b>Assista o Vídeo</b></a>
             </div>
         </section>
     </div>
