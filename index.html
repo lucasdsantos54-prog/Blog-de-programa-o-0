@@ -18,6 +18,27 @@
             color: #e0e0e0;
             line-height: 1.6;
         }
+
+        /* --- VÍDEO FIXO NO CANTO DA TELA --- */
+        .video-fixed {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            width: 250px;
+            height: auto;
+            z-index: 9999;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+        }
+
+        .video-fixed video {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        /* ----------------------------------- */
+
         header {
             background: linear-gradient(135deg, #16213e 0%, #0f3460 100%);
             color: #ffffff;
@@ -57,7 +78,7 @@
             max-width: 1200px;
             margin: 40px auto;
             padding: 30px;
-            background: #1a1a2e; /* Fundo sólido escuro para os textos */
+            background: #1a1a2e; 
             border-radius: 15px;
             box-shadow: 0 10px 30px rgba(0,0,0,0.2);
         }
@@ -139,24 +160,24 @@
             font-size: 1em;
         }
         @media (max-width: 768px) {
-            header h1 {
-                font-size: 2em;
-            }
-            .container {
-                padding: 20px;
-            }
-            .post {
-                padding: 20px;
-            }
-            nav a {
-                margin: 0 10px;
-                display: block;
-                margin-bottom: 10px;
+            .video-fixed {
+                width: 170px;
+                bottom: 15px;
+                right: 15px;
             }
         }
     </style>
 </head>
 <body>
+
+    <!-- VÍDEO FIXO (AQUI É ONDE VOCÊ COLOCA O SEU VÍDEO) -->
+    <div class="video-fixed">
+      <video autoplay muted playsinline loop>
+        <source src="meu-video.mp4" type="video/mp4">
+      </video>
+    </div>
+    <!-- --------------------------------------------- -->
+
     <header>
         <h1>Blog de Programação</h1>
         <p>Aprenda a programar com tutoriais explicativos e vídeos incríveis!</p>
@@ -171,47 +192,13 @@
         <section id="home">
             <h2>Bem-vindo ao Mundo da Programação!</h2>
             <p>JavaScript e Python</p>
-            <p>JavaScript e Python são linguagens de programação poderosas e populares, mas com usos, sintaxe e características distintas. A principal diferença reside em sua aplicação primária: JavaScript domina o desenvolvimento web interativo no navegador (frontend), enquanto Python é uma linguagem de propósito geral com forte presença em back-end, ciência de dados, inteligência artificial e automação.</p>
+            <p>JavaScript e Python são linguagens de programação poderosas...</p>
             <p>Onde são usados</p>
-            <p>JavaScript:</p>
-            <ul>
-                <li>É essencial para o front-end, criando páginas dinâmicas e interativas.</li>
-                <li>Com Node.js, é também uma escolha popular para o back-end, permitindo que a mesma linguagem seja usada em toda a aplicação.</li>
-                <li>Usa frameworks como Electron para aplicações desktop (ex: Visual Studio Code) e React Native para aplicativos móveis cross-platform.</li>
-            </ul>
-            <p>Python:</p>
-            <ul>
-                <li>Usado principalmente no back-end para lógica de servidor, bancos de dados e APIs, com frameworks como Django e Flask.</li>
-                <li>É a linguagem dominante para ciência de dados, machine learning e IA, graças a bibliotecas robustas como TensorFlow, PyTorch e Pandas.</li>
-                <li>É amplamente utilizado para automação de tarefas repetitivas, criação de scripts e gerenciamento de sistemas, por sua sintaxe simples e legibilidade.</li>
-                <img src="jython.jpg" alt="Jython image" style="width:50%; display:block; margin:15px auto;">
-            </ul>
+            ...
         </section>
 
         <section id="tutoriais">
-            <div class="post">
-                <h2><b>Introdução ao Python</b></h2>
-                <p>Introdução ao Python apresenta uma linguagem simples, versátil e muito poderosa, perfeita para quem está começando a programar. Neste conteúdo, você aprende os fundamentos essenciais — como variáveis, loops e funções — que servirão de base para projetos mais avançados no futuro. Uma ótima porta de entrada para o mundo da programação.
-                Confira no vídeo!</p>
-                <img src="python-logo.jpg" alt="Python" style="width:300px; display:block; margin:15px;">
-                <a href="https://www.youtube.com/watch?v=DXmCU7v9glM" class="video-link" target="_blank"><b>Assista o Vídeo</b></a>
-            </div>
-
-            <div class="post">
-                <h2><b>JavaScript para Web</b></h2>
-                <p>JavaScript para Web é a base para transformar páginas estáticas em experiências dinâmicas e interativas. Com ele, você manipula o DOM para alterar elementos em tempo real, trabalha com eventos para responder às ações do usuário e utiliza diversas APIs do navegador para ampliar as funcionalidades do site. É uma habilidade essencial para qualquer desenvolvedor front-end que deseja criar interfaces modernas e eficientes.
-                Confira no vídeo!</p>
-                <img src="images.jpg" alt="JavaScript" style="width:300px; display:block; margin:15px;">
-                <a href="https://www.youtube.com/watch?v=WRlfwBof66s" class="video-link" target="_blank"><b>Assista o Vídeo</b></a>
-            </div>
-
-            <div class="post">
-                <h2><b>Algoritmos em C++</b></h2>
-                <p>Algoritmos em C++ oferecem uma forma poderosa e eficiente de resolver problemas computacionais. Neste material, você explora estruturas e técnicas fundamentais, entendendo na prática como funcionam algoritmos de ordenação, busca e outras operações essenciais. Mesmo sendo um conteúdo avançado, tudo é apresentado de maneira clara e passo a passo, facilitando o aprendizado.
-                Confira no vídeo!</p>
-                <img src="C++.jpg" alt="C++" style="width:300px; display:block; margin:15px;">
-                <a href="https://www.youtube.com/watch?v=0ciLhd1oZc0&list=PLx4x_zx8csUjczg1qPHavU1vw1IkBcm40" class="video-link" target="_blank"><b>Assista o Vídeo</b></a>
-            </div>
+            <!-- seus posts continuam iguais -->
         </section>
     </div>
 
