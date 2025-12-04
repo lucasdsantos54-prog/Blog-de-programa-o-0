@@ -201,7 +201,7 @@
 <body>
 
     <!-- Vídeo MP4 incorporado -->
-    <video id="scroll-video">
+    <video id="scroll-video" autoplay muted loop>
         <source src="Webcam.mp4" type="video/mp4">
         Seu navegador não suporta o elemento de vídeo.
     </video>
@@ -298,16 +298,13 @@
         </div>
     </footer>
 
-    <!-- Script para controlar o vídeo com base no scroll -->
+    <!-- Script para efeito de parallax no vídeo -->
     <script>
-        var video = document.getElementById('scroll-video');
-        video.addEventListener('loadedmetadata', function() {
-            window.addEventListener('scroll', function() {
-                var scrollPosition = window.pageYOffset;
-                var maxScroll = document.body.scrollHeight - window.innerHeight;
-                var progress = Math.min(scrollPosition / maxScroll, 1); // Garante que não exceda 1
-                video.currentTime = progress * video.duration;
-            });
+        window.addEventListener('scroll', function() {
+            var scrollPosition = window.pageYOffset;
+            var video = document.getElementById('scroll-video');
+            // Move o vídeo para cima/baixo com o scroll (efeito parallax suave)
+            video.style.transform = 'translateY(' + (scrollPosition * 0.5) + 'px)';
         });
     </script>
 
