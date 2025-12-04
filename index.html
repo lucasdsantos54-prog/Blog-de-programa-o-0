@@ -201,8 +201,8 @@
 <body>
 
     <!-- Vídeo MP4 incorporado -->
-    <video id="scroll-video" autoplay>
-        <source src="Webcam (1).mp4" type="video/mp4">
+    <video id="scroll-video" autoplay controls>
+        <source src="Webcam.mp4" type="video/mp4">
         Seu navegador não suporta o elemento de vídeo.
     </video>
 
@@ -298,7 +298,7 @@
         </div>
     </footer>
 
-    <!-- Script para reiniciar vídeo no refresh e efeito de parallax suave -->
+    <!-- Script para reiniciar vídeo no refresh -->
     <script>
         var video = document.getElementById('scroll-video');
 
@@ -306,13 +306,6 @@
         window.addEventListener('load', function() {
             video.currentTime = 0;
             video.play(); // Garante que comece a tocar
-        });
-
-        // Efeito de parallax suave no vídeo com o scroll
-        window.addEventListener('scroll', function() {
-            var scrollPosition = window.pageYOffset;
-            // Reduzido para 0.1 para movimento mais sutil e evitar scroll excessivo
-            video.style.transform = 'translateY(' + (scrollPosition * 0.1) + 'px)';
         });
     </script>
 
